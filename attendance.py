@@ -77,3 +77,7 @@ def get_report(**kwargs):
         }
 
     return report
+
+
+# calling functions
+

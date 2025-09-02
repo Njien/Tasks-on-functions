@@ -59,28 +59,22 @@ def election_result():
     # winners = #add logic
     winners = []
     for candidate in candidates:
-        if candidates[candidate] == max_votes:
-            winners.append(candidate)
+        if candidates[candidate]["votes"] == max_votes:
+            winner=candidate
 
-    return {"winners": winners, "candidates": candidates}
-
-   # print(f"\nwinner(s): {winners[0]} with {max_votes} votes.\n")
-  #  print("Finale result:")
- #   for name, detail in candidates.items():
-#        result += (f"-{name}: {detail['votes']} votes")
+    return {"winners": winner, "candidates": candidates}
 
 
-
-
+# calling of functions
 
 # Register candidates
-register_candidates("Alice", "Bob", "Charlie", party="Independent", region="North")
+register_candidates("Jerry", "Mimi", "TK", party="APC", region="North")
 
 # Cast votes
-print(cast_vote("V1", "Alice"))
-print(cast_vote("V2", "Bob"))
-print(cast_vote("V1", "Charlie"))  # duplicate voter
-print(cast_vote("V3", "Alice"))
+print(cast_vote("V1", "Jerry"))
+print(cast_vote("V2", "Mimi"))
+print(cast_vote("V4", "TK"))  
+print(cast_vote("V3", "Jerry"))
 
 # Show result
 print(election_result())

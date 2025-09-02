@@ -63,3 +63,13 @@ def borrow_book(book_id):
                 return f"'{item['title']}' is not Available"
         else:
             return f"Book not found!!"
+        
+# Calling on functions
+
+print(add_book(id=1, title="python in 30min", author="John Doe", year=1949, genre="Dystopian"))
+print(add_book(id=2, title="To Kill a Mockingbird", author="Jerry Tk"))
+
+print(search_books("python", "Mockingbird"))
+
+print(borrow_book(1))
+print(borrow_book(1)) 

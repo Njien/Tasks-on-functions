@@ -74,3 +74,13 @@ def transfer(from_acc, to_acc, amount):
             return "Your limit is beteween 50 to 150000"
     else:
         return "Account does not exists"
+    
+    # calling of functions
+
+print(create_account("101", "Jerry", overdraft_limit=200))
+print(create_account("102", "Mimi"))
+
+print(deposit("101", 500))
+print(withdraw("101", 600)) 
+print(transfer("101", "102", 50))
+print(accounts)
